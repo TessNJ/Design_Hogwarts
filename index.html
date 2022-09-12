@@ -12,19 +12,24 @@
     <main>
       <section class="listManipluation">
         <h1>Student List</h1>
-        <nav>
-          <p>Filtering</p>
-          <button>All</button>
-          <button>House</button>
-          <button>Non-Expelled</button>
-          <button>Expelled</button>
-        </nav>
-        <select name="sorting" id="sorting">
-          <option value="1">First Name</option>
-          <option value="2">Last Name</option>
-          <option value="3">House</option>
-          <option value="4">Resposibility</option>
-        </select>
+        <div class="listSections">
+          <div class="listFiltering">
+            <p>Filtering</p>
+            <nav>
+              <button>All</button>
+              <button>House</button>
+              <button>Non-Expelled</button>
+              <button>Expelled</button>
+            </nav>
+          </div>
+          <select name="sorting" id="sorting">
+            <option value="1">Sort By</option>
+            <option value="2">First Name</option>
+            <option value="3">Last Name</option>
+            <option value="4">House</option>
+            <option value="5">Resposibility</option>
+          </select>
+        </div>
       </section>
       <section class="gridView">
         <div class="studentDiv">
@@ -62,6 +67,23 @@
         <div class="studentDiv">
           <h3>Harry James Potter</h3>
           <h4>Gryffindor</h4>
+        </div>
+      </section>
+      <section class="pop-up">
+        <div>
+          <div><img src="#" alt="#" /><img src="#" alt="#" /></div>
+          <div>
+            <h3></h3>
+            <p></p>
+            <p></p>
+          </div>
+          <div>
+            <ul>
+              <li>Prefects</li>
+              <li>Disiplin</li>
+              <li>Expelled</li>
+            </ul>
+          </div>
         </div>
       </section>
     </main>

@@ -8,10 +8,53 @@
 }
 
 /* Root */
+:root {
+  --main-bg-colour: rgb(246, 232, 193);
+  --secondary-colour: rgb(191, 115, 61);
+  --main-font-colour: black;
+  --secondary-font-colour: white;
+}
 /* General */
+body {
+  background-color: var(--main-bg-colour);
+  color: var(--main-font-colour);
+}
 header {
   text-align: center;
   padding: 2%;
+  background-color: var(--secondary-colour);
+  color: var(--main-font-colour);
+}
+
+.listManipluation {
+  max-width: 95%;
+  margin: 0 auto;
+}
+.listSections {
+  display: flex;
+  justify-content: space-between;
+}
+#sorting {
+  background-color: transparent;
+  border: none;
+  font-style: italic;
+}
+#sorting:hover {
+  background-color: rgb(235, 235, 235);
+  border-radius: 1vw;
+}
+.listSections nav {
+  display: flex;
+  max-width: 85%;
+  gap: 0 6%;
+}
+.listSections button {
+  border: none;
+  background-color: rgb(249, 243, 255);
+  padding: 2%;
+}
+.listFiltering {
+  width: 100%;
 }
 
 .gridView {
@@ -28,6 +71,24 @@ header {
   text-align: center;
 }
 
+footer {
+  text-align: center;
+  background-color: var(--secondary-colour);
+  color: var(--main-font-colour);
+}
+
+.pop-up {
+  border: red 1px solid;
+  width: 30%;
+  background-color: var(--secondary-colour);
+  position: absolute;
+  top: 30%;
+  left: 35%;
+}
+
+li {
+  list-style: none;
+}
 /* Media Queries */
 
 @supports (display: grid) {
@@ -40,6 +101,7 @@ header {
       gap: 0 1%;
       width: 95%;
       margin: 0 auto;
+      padding: 1% 0;
     }
     .studentDiv {
       max-width: 100%;
@@ -50,6 +112,10 @@ header {
       flex-direction: column;
       justify-content: center;
     }
+
+    .listSections nav {
+      max-width: 50%;
+    }
   }
   @media screen and (min-width: 1101px) {
     .gridView {
@@ -57,5 +123,12 @@ header {
       grid-template-columns: repeat(5, 1fr);
       height: 15vw;
     }
+    .listSections nav {
+      max-width: 30%;
+    }
   }
+}
+
+.hidden {
+  display: none;
 }
