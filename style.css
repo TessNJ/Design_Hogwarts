@@ -1,5 +1,61 @@
-/* General */
+/* Reset Styling */
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
 
 /* Root */
+/* General */
+header {
+  text-align: center;
+  padding: 2%;
+}
+
+.gridView {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 150vw;
+}
+
+.studentDiv {
+  max-width: 90%;
+  border: 1px red solid;
+  margin-left: 5%;
+  text-align: center;
+}
 
 /* Media Queries */
+
+@supports (display: grid) {
+  @media screen and (min-width: 768px) {
+    .gridView {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      height: 25vw;
+      justify-content: space-between;
+      gap: 0 1%;
+      width: 95%;
+      margin: 0 auto;
+    }
+    .studentDiv {
+      max-width: 100%;
+      height: 6vw;
+      margin-left: 0;
+      padding: 2%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+  @media screen and (min-width: 1101px) {
+    .gridView {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      height: 15vw;
+    }
+  }
+}
